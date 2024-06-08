@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>WATAPAK: Cek Status Website Yang Di Blokir Kominfo Secara Real-Time</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="cek nawala, situs cek nawala, cara cek nawala, tools cek nawala, tool nawala checker, nawala checker" name="keywords">
+        <meta content="WATAPAK merupakan layanan yang menyediakan tools atau alat pengecekan status url secara real-time untuk mengetahui apakah website anda di blokir atau tidak." name="description">
+        <meta name="author" content="WATAPAK">
+        <meta name="language" content="id,en" />
+        <meta name="distribution" content="Global" />
+        <meta name="rating" content="general" />
+        <meta name="robots" content="index,follow" />
+        <meta name="googlebot" content="index,follow" />
+        <meta name='Googlebot-Image' content='index,follow' />
+        <meta name='Scooter' content='index,follow' />
+        <meta name='msnbot' content='index,follow' />
+        <meta name='alexabot' content='index,follow' />
+        <meta name='Slurp' content='index,follow' />
+        <meta name='ZyBorg' content='index,follow' />
+        <meta name='yahoobot' content='index,follow' />
+        <meta name='bingbot' content='index,follow' />
+        <meta name="expires" content="never" />
+        <meta name="geo.country" content="ID" />
+        <meta name="tgn.nation" content="Indonesia" />
+        <meta name="geo.placename" content="Indonesia" />
+        <meta name="geo.position" content="x;x" />
+        <meta name="geo.region" content="indonesia" />
+        <meta name="author" content="WATAPAK" />
+        <meta name="publisher" content="WATAPAK" />
+        <meta name="copyright" content="WATAPAK" />
+        <meta name="dc.language" content="id,en" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="dc.title" content="WATAPAK: Cek Status Website Yang Di Blokir Kominfo Secara Real-Time">
+        <meta name="dc.keywords" content="cek nawala, situs cek nawala, cara cek nawala, tools cek nawala, tool nawala checker, nawala checker">
+        <meta name="dc.subject" content="WATAPAK: Cek Status Website Yang Di Blokir Kominfo Secara Real-Time">
+        <meta name="dc.description" content="WATAPAK merupakan layanan yang menyediakan tools atau alat pengecekan status url secara real-time untuk mengetahui apakah website anda di blokir atau tidak.">
+        <link href="/img/favicon.ico" rel="icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Roboto:wght@500;700&amp;display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        <link href="/css/app.css" rel="stylesheet">
+    </head>
+<body>
+    <div class="container-fluid position-relative d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-secondary navbar-dark">
+                <a href="/wathefak-admin/index.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Watapak</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="/img/user.png" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">Selamat Datang</h6>
+                        <span>Cerita77</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="/wathefak-admin/index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="/wathefak-admin/table.html" class="nav-item nav-link active"><i class="fa fa-table me-2"></i>Bulk Checker</a>
+                    <a href="/wathefak-admin/user_management.html" class="nav-item nav-link active"><i class="fa fa-table me-2"></i>Manage Users</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="index.html" class="dropdown-item">Sign In</a>
+                            <a href="/wathefak-admin/404.html" class="dropdown-item">404 Error</a>
+                            <a href="/wathefak-admin/blank.html" class="dropdown-item">Blank Page</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar End -->
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
+                <a href="/wathefak-admin/index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <form class="d-none d-md-flex ms-4">
+                    <input class="form-control bg-dark border-0" type="search" placeholder="Search">
+                </form>
+                <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="/img/user.png" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">Cerita77</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">My Profile</a>
+                            <a href="index.html" class="dropdown-item">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar End -->
+
+            <!-- Bulk Checker Form Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-secondary rounded h-100 p-4">
+                    <h2 class="mb-4">Bulk Checker</h2>
+                    <h6 class="mb-4">Pengecekan URL secara masal untuk cek status domain apakah di blokir oleh pemerintah.</h6>
+                    <div class="pt-8 max-w-4xl mx-auto space-y-4">
+                        <form id="domainCheckForm">
+                            <textarea id="domainList" rows="8" class="form-control bg-gray-50 border-2 border-gray-700" placeholder="Masukan domain-domain di sini sampai 100, satu persatu dan perbaris... 
+google.com 
+WATAPAK.com" autocapitalize="none"></textarea>
+                            <div class="d-flex justify-content-start mt-4">
+                                <button class="btn btn-primary" type="button" onclick="checkDomains()">Cek domain</button>
+                                <div id="errorCheckDomains" class="text-red-500 text-sm hidden"></div>
+                            </div>
+                        </form>
+                        <div id="logs" class="hidden prose max-w-full pt-8">
+                                <h2 class="font-bold text-2xl flex items-center space-x-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM4 5V19H20V5H4ZM12 15H18V17H12V15ZM8.66685 12L5.83842 9.17157L7.25264 7.75736L11.4953 12L7.25264 16.2426L5.83842 14.8284L8.66685 12Z"></path>
+                                    </svg>
+                                    <span>Logs</span>
+                                </h2>
+                                <pre id="logsPre" class="bg-gray-900 rounded-lg max-h-56">
+                                    <code id="logResults"></code>
+                                </pre>
+                            </div>
+                        <div id="comparison" class="prose max-w-full block lg:grid lg:grid-cols-2 gap-8"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bulk Checker Form End -->
+
+            <!-- Footer Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-secondary rounded-top p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            © <a href="#">Watapak.com</a>, All Right Reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+        </div>
+        <!-- Content End -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const params = new URLSearchParams(window.location.search);
+          const username = params.get('username') || 'Guest';
+          document.getElementById('username').textContent = username;
+        });
+    </script>    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/chart/chart.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/js/main.js"></script>
+    <script src="/js/script.js"></script>
+
+    <script>
+        function checkDomains() {
+  const domainList = document.getElementById("domainList").value;
+  let domains = domainList.split("\n").filter(Boolean);
+  domains = domains.slice(0, 100); // Limit to 100 domains
+
+  if (domains.length === 0) {
+    alert("Silahkan masukan daftar domain.");
+    return;
+  }
+
+  Promise.all(domains.map(domain => {
+    return fetch('/api/check-domains', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ domains: [domain] })
+    }).then(response => response.json());
+  }))
+  .then(resultsArray => {
+    const logsDiv = document.getElementById("logs");
+    const logsPre = document.getElementById("logsPre");
+    const logsResultsDiv = document.getElementById("logResults");
+    const comparisonDiv = document.getElementById("comparison");
+
+    logsResultsDiv.innerHTML = "";
+    comparisonDiv.innerHTML = "";
+
+    let allowedCount = 0;
+    let blockedCount = 0;
+    const allowedDomains = [];
+    const blockedDomains = [];
+
+    resultsArray.forEach(results => {
+      results.forEach(data => {
+        if (data.status === "error") {
+          data.status = "blocked"; // Treat errors as blocked
+        }
+        logsResultsDiv.innerHTML += `Domain: ${data.domain} | Status: ${data.status}\n`;
+        if (data.status === "allowed") {
+          allowedCount++;
+          allowedDomains.push(data.domain);
+        } else if (data.status === "blocked") {
+          blockedCount++;
+          blockedDomains.push(data.domain);
+        }
+      });
+    });
+
+    if (allowedCount > 0) {
+      comparisonDiv.innerHTML += `
+        <div>
+          <h3 class="flex items-center space-x-2">
+            <svg id="checkIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="text-green-500" fill="currentColor">
+            <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z"></path>
+            </svg>
+            <span>Tidak Diblokir</span>
+          </h3>
+          <div class="font-mono text-gray-100">
+            <div class="flex justify-between bg-gray-900 text-sm rounded-t-lg px-4 py-2">
+              <div>${allowedCount} domains</div>
+              <button class="copy-btn flex items-center space-x-1" onclick="copyToClipboard('allowedDomains', this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path d="M19 2H9C7.9 2 7 2.9 7 4V14H9V4H19V14H9V16H11V14H19C20.1 14 21 13.1 21 12V4C21 2.9 20.1 2 19 2ZM17 8L11.41 12.59L7.83 9L4 12.83L5.41 14.24L7.83 11.83L11.41 15.41L18.41 9.41L17 8ZM4 18V20H18V18H4Z"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre id="allowedDomains" class="rounded-b-lg rounded-t-none mt-0"><code>${allowedDomains.join("\n")}</code></pre>
+          </div>
+        </div>`;
+    } else {
+      comparisonDiv.innerHTML += `
+        <div>
+          <h3 class="flex items-center space-x-2">
+            <svg id="checkIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="text-green-500" fill="currentColor">
+            <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z"></path>
+            </svg>
+            <span>Tidak Diblokir</span>
+          </h3>
+          <div class="font-mono text-gray-100">
+            <div class="flex justify-between bg-gray-900 text-sm rounded-t-lg px-4 py-2">
+              <div>${allowedCount} domain</div>
+              <button class="copy-btn flex items-center space-x-1" onclick="copyToClipboard('allowedDomains', this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path d="M19 2H9C7.9 2 7 2.9 7 4V14H9V4H19V14H9V16H11V14H19C20.1 14 21 13.1 21 12V4C21 2.9 20.1 2 19 2ZM17 8L11.41 12.59L7.83 9L4 12.83L5.41 14.24L7.83 11.83L11.41 15.41L18.41 9.41L17 8ZM4 18V20H18V18H4Z"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre id="allowedDomains" class="rounded-b-lg rounded-t-none mt-0"><code>Kosong</code></pre>
+          </div>
+        </div>`;
+    }
+
+    if (blockedCount > 0) {
+      comparisonDiv.innerHTML += `
+        <div>
+          <h3 class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="text-red-500" fill="currentColor">
+              <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 10.5858L14.8284 7.75736L16.2426 9.17157L13.4142 12L16.2426 14.8284L14.8284 16.2426L12 13.4142L9.17157 16.2426L7.75736 14.8284L10.5858 12L7.75736 9.17157L9.17157 7.75736L12 10.5858Z"></path>
+            </svg>
+            <span>Diblokir</span>
+          </h3>
+          <div class="font-mono text-gray-100">
+            <div class="flex justify-between bg-gray-900 text-sm rounded-t-lg px-4 py-2">
+              <div>${blockedCount} domains</div>
+              <button class="copy-btn flex items-center space-x-1" onclick="copyToClipboard('blockedDomains', this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path d="M19 2H9C7.9 2 7 2.9 7 4V14H9V4H19V14H9V16H11V14H19C20.1 14 21 13.1 21 12V4C21 2.9 20.1 2 19 2ZM17 8L11.41 12.59L7.83 9L4 12.83L5.41 14.24L7.83 11.83L11.41 15.41L18.41 9.41L17 8ZM4 18V20H18V18H4Z"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre id="blockedDomains" class="rounded-b-lg rounded-t-none mt-0"><code>${blockedDomains.join("\n")}</code></pre>
+          </div>
+        </div>`;
+    } else {
+      comparisonDiv.innerHTML += `
+        <div>
+          <h3 class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2 3 3 3ZM4 5V19H20V5H4ZM12 15H18V17H12V15ZM8.66685 12L5.83842 9.17157L7.25264 7.75736L11.4953 12L7.25264 16.2426L5.83842 14.8284L8.66685 12Z"></path>
+            </svg>
+            <span>Diblokir</span>
+          </h3>
+          <div class="font-mono text-gray-100">
+            <div class="flex justify-between bg-gray-900 text-sm rounded-t-lg px-4 py-2">
+              <div>${blockedCount} domain</div>
+              <button class="copy-btn flex items-center space-x-1" onclick="copyToClipboard('blockedDomains', this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path d="M19 2H9C7.9 2 7 2.9 7 4V14H9V4H19V14H9V16H11V14H19C20.1 14 21 13.1 21 12V4C21 2.9 20.1 2 19 2ZM17 8L11.41 12.59L7.83 9L4 12.83L5.41 14.24L7.83 11.83L11.41 15.41L18.41 9.41L17 8ZM4 18V20H18V18H4Z"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre id="blockedDomains" class="rounded-b-lg rounded-t-none mt-0"><code>Tidak ada</code></pre>
+          </div>
+        </div>`;
+    }
+
+    logsDiv.classList.remove('hidden');
+  })
+  .catch(error => {
+    console.error('Error checking domains:', error);
+  });
+}
+
+function copyToClipboard(id, button) {
+  const preElement = document.querySelector(`#${id}`);
+  if (preElement) {
+    const textToCopy = preElement.textContent;
+    const tempTextArea = document.createElement("textarea");
+    tempTextArea.value = textToCopy;
+    document.body.appendChild(tempTextArea);
+    tempTextArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempTextArea);
+    const allButtons = document.querySelectorAll(".copy-btn");
+    allButtons.forEach(btn => btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+      <path d="M19 2H9C7.9 2 7 2.9 7 4V14H9V4H19V14H9V16H11V14H19C20.1 14 21 13.1 21 12V4C21 2.9 20.1 2 19 2ZM17 8L11.41 12.59L7.83 9L4 12.83L5.41 14.24L7.83 11.83L11.41 15.41L18.41 9.41L17 8ZM4 18V20H18V18H4Z"></path>
+    </svg><span>Copy</span>`);
+    button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+      <path d="M19 2H9C7.9 2 7 2.9 7 4V14H9V4H19V14H9V16H11V14H19C20.1 14 21 13.1 21 12V4C21 2.9 20.1 2 19 2ZM17 8L11.41 12.59L7.83 9L4 12.83L5.41 14.24L7.83 11.83L11.41 15.41L18.41 9.41L17 8ZM4 18V20H18V18H4Z"></path>
+    </svg><span>Copied</span>`;
+  }
+}
+
+    </script>
+</body>
+</html>
